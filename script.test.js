@@ -37,9 +37,25 @@ describe("translate", () => {
     test("sploosh to ooshsplay", () => {
         expect(translate("sploosh")).toEqual("ooshsplay");
     });
-    // LOWERCASE TEST
-    test("SarCAsM to sarcasm", () => {
-        expect(translate("SarCAsM")).toEqual("arcasmsay");
+    // LOWERCASE TEST --- COMMENTED OUT FOR EXTENDED CHALLENGES
+    // test("SarCAsM to sarcasm", () => {
+    //     expect(translate("SarCAsM")).toEqual("arcasmsay");
+    // });
+    // KEEP CASE TEST
+    test("SarCAsM to SarCAsM", () => {
+        expect(translate("SarCAsM")).toEqual("arCAsMSay");
     });
-
+    test("PlEtHorA to EtHorAPLay", () => {
+        expect(translate("PlEtHorA")).toEqual("EtHorAPlay")
+    });
+    // ALLOW PUNCTUATION
+    test("stop. to opstay.", () => {
+        expect(translate("stop.")).toEqual("opstay.");
+    });
+    test("duck? to uckday?", () => {
+        expect(translate("duck?")).toEqual("uckday?");
+    });
+    test("aardvark? to aardvarkway?", () => {
+        expect(translate("aardvark?")).toEqual("aardvarkway?");
+    });
 })
