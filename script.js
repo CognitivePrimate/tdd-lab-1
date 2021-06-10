@@ -1,10 +1,18 @@
 const translate = (str) => {
     const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
     const closingPunctuation = ["!", ".", "?", "!!!", "...",];
+    const symbols = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "`", "~", "|", "{", "}", "[", "]", "<", ">",];
     let hasPunctuation = false;
     let newStr = "";
     // commented out below to meet conflicting build spec & extended challenges case-sensitivity
     // str = str.toLowerCase();
+
+    // symbol check
+    for (let char of str){
+        if (symbols.includes(char)){
+            return str;
+        };
+    }
     
     
 
@@ -63,7 +71,7 @@ const translate = (str) => {
     };
 }
 
-// console.log(translate("gira!ffe"));
+console.log(translate("shouldn't"));
 
 module.exports = {
     translate

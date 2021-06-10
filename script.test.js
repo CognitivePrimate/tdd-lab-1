@@ -58,4 +58,18 @@ describe("translate", () => {
     test("aardvark? to aardvarkway?", () => {
         expect(translate("aardvark?")).toEqual("aardvarkway?");
     });
+    // DONT CHANGE IF SYMBOLS ARE IN STRING
+    test("grant@chirpus.com to grant@chirpus.com", () => {
+        expect(translate("grant@chirpus.com")).toEqual("grant@chirpus.com");
+    });
+    test("ten % to ten %", () => {
+        expect(translate("ten %")).toEqual("ten %");
+    });
+    // WORK WITH CONTRACTIONS
+    test("can't to an'tcay", () => {
+        expect(translate("can't")).toEqual("an'tcay");
+    });
+    test("shouldn't to ouldn'tshay", () => {
+        expect(translate("shouldn't")).toEqual("ouldn'tshay");
+    });
 })
