@@ -26,12 +26,11 @@ const translate = (str) => {
     // non vowels will equal -1
     if (vowels.indexOf(str[0]) > -1){
         newStr = `${str}way`;
-        // console.log(newStr)
+        
 
         for (let char of str){
             if (closingPunctuation.includes(char)){
                 newStr = closingPuncuationCheck(newStr);
-                // console.log(newStr);
                 continue;
             }
         }
@@ -43,7 +42,6 @@ const translate = (str) => {
         for (let char of str){
             if (vowels.includes(char)){
                 vowelIndex = str.indexOf(char);
-                console.log(vowelIndex);
                 break;
             };
         };
@@ -65,7 +63,7 @@ const translate = (str) => {
     };
 }
 
-console.log(translate("gira!ffe"));
+// console.log(translate("gira!ffe"));
 
 module.exports = {
     translate
